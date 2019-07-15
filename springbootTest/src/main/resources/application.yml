@@ -36,9 +36,10 @@ spring:
     #ES配置
     data:
       elasticsearch:
-        cluster-name: myes
-        cluster-nodes: 192.168.136.139:9300
-
+        cluster-name: justcall-es
+        cluster-nodes: 192.168.9.183:9200
+        #http://192.168.9.183:9200/
+        #http://120.236.21.243:8901/
 
 mybatis:
   mapper-locations: classpath:mapping/*.xml
