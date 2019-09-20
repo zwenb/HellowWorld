@@ -12,4 +12,16 @@
         FROM
             user
     </select>
+
+    <insert id="addUser" parameterType="com.zwb.model.User">
+        INSERT INTO user (
+          id,
+          user_name,
+          skill_id
+        )VALUES(
+          ROUND( RAND() * 5444 + 234 ),
+          #{name},
+          #{skillId}
+        )
+    </insert>
 </mapper>

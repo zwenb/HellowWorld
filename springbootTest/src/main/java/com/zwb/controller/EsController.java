@@ -33,7 +33,7 @@ public class EsController {
     public Object batchAddUser() {
         long startTime = System.currentTimeMillis();
         int n = 0;
-            for (int i = 0; i < 1; i++) {
+        for (int i = 0; i < 1; i++) {
             UserEntity user = new UserEntity();
             user.setId(String.valueOf(new Random().nextInt()));
             user.setAge(new Random().nextInt(99));

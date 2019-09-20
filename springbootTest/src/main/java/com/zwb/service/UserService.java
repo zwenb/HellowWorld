@@ -28,4 +28,12 @@ public class UserService {
         return result;
     }
 
+    public int addUser(){
+        String skillId = "null";
+        User user = new User();
+        user.setName("小花");
+        user.setSkillId(skillId);
+        return dao.addUser(user);
+    }
+
 }

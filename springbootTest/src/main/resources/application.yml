@@ -13,7 +13,7 @@ spring:
           filters: stat
           driver-class-name: com.mysql.jdbc.Driver
           #基本属性
-          url: jdbc:mysql://127.0.0.1:3306/springbootdb?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+          url: jdbc:mysql://120.25.146.189:3306/justcall?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
           username: root
           password: justcall123
           #配置初始化大小/最小/最大
@@ -40,6 +40,28 @@ spring:
         cluster-nodes: 192.168.9.183:9200
         #http://192.168.9.183:9200/
         #http://120.236.21.243:8901/
+    #Redis配置
+    redis:
+      # Redis数据库索引（默认为0）
+      database: 1
+      # Redis服务器地址
+      host: 120.25.146.189
+      # Redis服务器连接端口
+      port: 6379
+      # Redis服务器连接密码（默认为空）
+      password: justcall123
+      lettuce:
+        pool:
+          # 连接池最大连接数（使用负值表示没有限制） 默认 8
+          max-active: 8
+          # 连接池最大阻塞等待时间（使用负值表示没有限制） 默认 -1
+          max-wait: -1
+          # 连接池中的最大空闲连接 默认 8
+          max-idle: 8
+          # 连接池中的最小空闲连接 默认 0
+          min-idle: 0
+      # 连接超时时间（毫秒）
+      timeout: 5000
 
 mybatis:
   mapper-locations: classpath:mapping/*.xml

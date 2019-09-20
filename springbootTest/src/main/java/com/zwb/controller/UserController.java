@@ -24,4 +24,9 @@ public class UserController {
         return userService.findAllUser(1,5);
     }
 
+    @ResponseBody
+    @GetMapping("/addUser")
+    public Object addUser(){
+        return userService.addUser();
+    }
 }

@@ -1,11 +1,26 @@
 package com.zwb.model;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
     private String id;
     private String name;
     private String sex;
     private int age;
     private String address;
+    private String skillId;
+
+    public User(){
+
+    }
+
+    public User(String id, String name, String sex, int age, String address){
+        this.id = id;
+        this.name = name;
+        this.sex = sex;
+        this.age = age;
+        this.address = address;
+    }
 
     public String getId() {
         return id;
@@ -45,5 +60,13 @@ public class User {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public String getSkillId() {
+        return skillId;
+    }
+
+    public void setSkillId(String skillId) {
+        this.skillId = skillId;
     }
 }

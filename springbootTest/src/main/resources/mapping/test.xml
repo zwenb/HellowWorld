@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zwb.mapper.test">
+
+    <select id="testId" resultType="Map">
+        SELECT
+            id,
+            user_name AS name,
+            sex,
+            age,
+            address
+        FROM
+            user
+    </select>
+
+    <select id="selectBySql"  resultType="java.util.Map">
+    	select * from justcall_project_config
+    </select>
+</mapper>
