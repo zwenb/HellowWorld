@@ -2,6 +2,7 @@ package com.zwb.test;
 
 import com.zwb.common.commondao.BaseDao;
 import com.zwb.config.ProjectProperty;
+import com.zwb.test.spring_chain_pattern.ApplicationService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,9 @@ public class SqlSessionDaoTest {
 
     @Autowired
     private ProjectProperty projectProperty;
+
+    @Autowired
+    private ApplicationService applicationService;
     
     @Test
     public void test(){
@@ -30,7 +34,8 @@ public class SqlSessionDaoTest {
             }
         }*/
 
-        System.out.println(projectProperty.getPropByKey("justcall_host"));
+        //System.out.println(projectProperty.getPropByKey("justcall_host"));
+
     }
 
 }
