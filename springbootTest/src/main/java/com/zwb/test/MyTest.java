@@ -12,13 +12,18 @@ import java.util.Map;
 
 public class MyTest extends Man {
 
+    public static final String S = "hello world"; //常量池中
+
     @Test
     public void test(){
-        String s = ",abc_abc_NBA_CBA";
-        System.out.println(s.indexOf("NBA"));
-
+        String s = "abc_abc_NBA_CBA";
+        /*System.out.println(s.indexOf("NBA"));
         String a = "";
-        System.out.println(Integer.valueOf(a));
+        System.out.println(Integer.valueOf(a));*/
+
+        StringBuffer sb = new StringBuffer(s);
+        System.out.println(sb.reverse());
+        StringBuilder stringBuilder = new StringBuilder();
     }
 
     @Test

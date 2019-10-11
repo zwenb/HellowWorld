@@ -27,8 +27,8 @@ public class FastJsonUtil {
     /**
      * 将json字符串转换为json对象
      */
-    public static JSONObject jsonStrToJsonObj(String jsonObj){
-        return JSON.parseObject(jsonObj);
+    public static JSONObject jsonStrToJsonObj(String jsonStr){
+        return JSON.parseObject(jsonStr);
     }
 
     /**
